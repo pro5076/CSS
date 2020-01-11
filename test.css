@@ -1,0 +1,477 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+* { font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif'; }
+
+html {
+
+   background: linear-gradient(to bottom, #0174DF, #5194AE);
+
+  height: auto !important;
+
+}
+
+
+
+body {
+
+background: transparent;
+
+animation: snow 20s linear infinite;
+
+
+
+/*백그라운드 이미지 원근감느낌 이미지*/
+
+background-image:url('https://cdn.discordapp.com/attachments/460145928850898945/515694458633846831/snow.png'), url("https://cdn.discordapp.com/attachments/460145928850898945/515694460668084274/snow3.png"), url("https://cdn.discordapp.com/attachments/460145928850898945/515694462278828073/snow2.png");
+
+}
+
+
+
+
+
+/*뒷배경 움직이는 애니메이션*/
+
+@keyframes snow {
+
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+
+}
+
+.circle{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color:red;
+  top: 50%;
+  left: 50%;
+  
+  animation-name: sampleAnimation; /*animation 이름*/
+  animation-duration: 8s; /*animation 지속시간*/
+  animation-delay: 2s; /*animation 종료 후 대기시간*/
+  animation-iteration-count: infinite; /*animation 무한으로 반복*/
+}
+
+@keyframes sampleAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  
+  50%{
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.vote-btn[data-type="up"] {
+
+  border: none;
+
+  font-size: 0;
+
+  outline: 0 !important; 
+
+}
+
+
+
+.vote-btn[data-type="up"]:hover {
+
+  background: none !important;
+
+}
+
+
+
+.vote-btn[data-type="up"]::before {
+
+  display: inline-block;
+
+  background: white;
+
+  border: solid #5cb85c 1px;
+
+  float: left;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 60px;
+
+  font-size: 26pt;
+
+  content: "\f164";
+
+  padding-top: 17px;
+
+  padding-left: 2px;
+
+  font: normal 22px/1 FontAwesome;
+
+  -moz-transition:color .2s ease;
+
+  -o-transition:color .2s ease;
+
+  -ms-transition:color .2s ease;
+
+  -webkit-transition:color .2s ease;
+
+  transition:color .2s ease;
+
+}
+
+
+
+.vote-btn[data-type="up"]:hover::before {
+
+  background: #5cb85c;
+
+  color: white;
+
+}
+
+
+
+
+
+.vote-btn[data-type="up"]:focus::before {
+
+  color: #5cb85c;
+
+}
+
+
+
+.vote-btn[data-type="up"]:focus:hover::before {
+
+  color: white;
+
+}
+
+
+
+.vote-btn[data-type="up"] span {
+
+  float: left;
+
+  padding-top: 14px;
+
+  padding-left: 15px;
+
+  font-size: 22px;
+
+  color: #5cb85c;
+
+}
+
+*:focus {
+    outline: none;
+}
+
+
+a {
+    color: #888;
+}
+
+a:hover,
+a:focus {
+    color: #333;
+}
+
+
+header #right-search-form>input[type=text] {
+    margin-top: 3px;
+    margin-right: 18px;
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #ddd,
+    0 0 0 8px #fff,
+    0 0 2px 8px #eee;
+    transition: 0.2s;
+}
+
+header #right-search-form>input[type=text]:hover,
+header #right-search-form>input[type=text]:focus {
+    border-color: #888;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #888,
+    0 0 0 8px #fff,
+    0 0 2px 8px #999;
+}
+
+header #right-search-form>#right-search-btn {
+    margin-top: 3px;
+    color: #ddd;
+    background: white;
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #ddd,
+    0 0 0 8px #fff,
+    0 0 2px 8px #999;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+header #right-search-form>#right-search-btn:hover,
+header #right-search-form>#right-search-btn:focus {
+    color: #888;
+    border: 1px dashed #888;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #888,
+    0 0 0 8px #fff,
+    0 0 2px 8px #999;
+}
+
+header #header-bar>.row {
+    margin-top: 5px;
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #ddd,
+    0 0 0 8px #fff,
+    0 0 2px 8px #eee;
+}
+
+header #header-bar a.dropdown-toggle {
+    color: #888;
+}
+
+header #header-bar #header-top-notice strong.notice-badge {
+    background: #888;
+}
+
+header #header-bar #header-top-notice a {
+    color: #888;
+}
+
+header #header-bar #header-menu-right #userDropdown #notification-badge {
+    background: #888;
+}
+
+#main .menu-wrapper {
+    margin-bottom: 1.8em;
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #ddd,
+    0 0 0 8px #fff,
+    0 0 2px 8px #eee;
+}
+
+#main .menu-wrapper>.header {
+    background: #fff;
+    color: #888;
+    border-bottom: 1px dashed #ddd;
+}
+
+#main .menu-wrapper>a,
+#main .menu-wrapper>.header>a {
+    color: #888;
+}
+
+#main .menu-wrapper>a>em {
+    color: #888;
+}
+
+#main .menu-wrapper .spacer {
+    background: #ddd;
+    height: 2px;
+}
+
+#main .menu-wrapper>a>i.fa.fa-square {
+    color: #888;
+}
+
+#main #main-content {
+    padding-left: 21px;
+}
+
+#main #main-content>div.frame {
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #ddd,
+    0 0 0 8px #fff,
+    0 0 2px 8px #eee;
+}
+
+#board-info #board-info-bottom a {
+    color: #888;
+}
+
+#board-info #viewers-area #viewers:before {
+    content: ""; /* 접속자 수 앞 문구 */
+    cursor: text;
+}
+
+#board-info #viewers-area #viewers:after {
+    content: ""; /* 접속자 수 뒤 문구 */
+    cursor: text;
+}
+
+#article-list #article-option-area>#article-option-area-toggle-btn {
+    line-height: inherit;
+    background: white;
+    border-radius: 20px;
+    border: 1px dashed #ddd;
+    box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 5px #aaa,
+    0 0 0 8px #fff,
+    0 0 2px 8px #eee;
+    color: #888;
+}
+
+#article-list #article-list-category {
+    background: white;
+    border-top: 2px dashed #ddd;
+}
+
+#article-list #article-list-category>a {
+    background: white;
+    transition: 0.2s;
+}
+
+#article-list #article-list-category>a:hover,
+#article-list #article-list-category>a:focus {
+    background: #eee;
+}
+
+#article-list #article-list-category>a>.fa-home:before {
+    color: #888;
+}
+
+#article-list>.article-list-row>.item>.list-header>span {
+    background: #888;
+}
+
+span.a-badge i.fa.fa-info-circle {
+    color: #888;
+}
+
+#article-list>.article-list-row>.item>.list-title>small.comment-count {
+    color: #888;
+}
+
+#article-list>.article-list-row>.item>.list-title>.list-writer.logged>span {
+    color: #888;
+}
+
+#article-content-wrapper>.header {
+    border-top: 1px dashed #ddd;
+}
+
+#article-reply-area > .header h5,
+#article-reply-area > .header h5 > a {
+    color: #888;
+}
+
+#article-reply-area #reply-real-area .reply > .reply-header > .reply-writer.logged,
+#article-reply-area #reply-best-area .reply > .reply-header > .reply-writer.logged,
+#article-reply-area #reply-real-area .reply > .reply-header > .reply-menu a,
+#article-reply-area #reply-best-area .reply > .reply-header > .reply-menu a {
+    color: #888;
+}
+
+.fr-popup,
+.fr-toolbar.fr-top {
+    border-top: 3px dashed #888;
+}
+
+
+.fr-toolbar .fr-command.fr-btn,
+.fr-popup .fr-command.fr-btn {
+    color: #888;
+}
+
+#article-neighbor-list>div,
+#article-neighbor-list>div>a {
+    color: #888;
+}
+
+#article-list #boardSearchForm .form-control {
+    width: calc(100% - 2px);
+    margin-left: 1.5px;
+    border: 1px solid #888;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>span,
+.pagination>.active>span:focus {
+    background-color: #888;
+    border-color: #888;
+    transition: 0.2s;
+}
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>li>a:hover,
+.pagination>li>span:hover {
+    background-color: white;
+    border-color: #888;
+    color: #888;
+    transition: 0.2s;
+}
+.pagination>li>a,
+.pagination>li>a:focus,
+.pagination>li>span
+.pagination>li>span:focus {
+    color: #888;
+    background: white;
+    transition: 0.2s;
+}
+
+/* 하트 펌핑 애니메이션 */
+
+small.favo i.fa.fa-heart {
+
+    animation: heartbeat 1s infinite;
+
+}
+
+
+
+@keyframes heartbeat {
+
+    0% {transform: scale(1);}
+
+    30% {transform: scale(1.25);}
+
+    42% {transform: scale(0.9);}
+
+    60% {transform: scale(1.15);}
+
+    85% {transform: scale(0.95);}
+
+    100% {transform: scale(1);}
+
+}
+
+/* 보라색 선 삭제 */
+
+#article-list #article-list-category {
+
+    border-top: none;
+
+} 
+
+
+
+/* 게시글 목록 좌우 여백 삭제 */
+
+#article-list {
+
+    padding: 0 0 2em;
+
+}
